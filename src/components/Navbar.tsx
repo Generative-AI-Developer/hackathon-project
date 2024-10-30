@@ -1,74 +1,60 @@
 import React from "react";
+import Link from "next/link";
+import { NavigationMenuDemo } from "./Navlinks";
+import { GiHamburgerMenu } from "react-icons/gi";
+import Image from "next/image";
 
 const Navbar = () => {
   return (
     <div>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-myWhite">
         <div className="navbar-start">
           <div className="dropdown">
-            <label tabIndex={0} className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
+            <label tabIndex={0} className="p-0 text-2xl lg:hidden">
+              <GiHamburgerMenu />
             </label>
             <ul
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a>Item 1</a>
+                <Link href={"/"}>Home</Link>
+              </li>
+              <li tabIndex={0}>
+                <details>
+                  <summary>Women</summary>
+                  <ul className="p-2">
+                    <li>
+                      <Link href={"#"}>Tops</Link>
+                    </li>
+                    <li>
+                      <Link href={"#"}>Pants</Link>
+                    </li>
+                    <li>
+                      <Link href={"#"}>Accesories/Jewelary</Link>
+                    </li>
+                    <li>
+                      <Link href={"#"}>Shoes</Link>
+                    </li>
+                  </ul>
+                </details>
               </li>
               <li>
-                <a>Parent</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
+                <Link href={"/"}>About</Link>
               </li>
               <li>
-                <a>Item 3</a>
+                <Link href={"/"}>Contact</Link>
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+          <div>
+            <Image src="/Logo.png" alt="logo" height={50} width={100} />
+          </div>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li tabIndex={0}>
-              <details>
-                <summary>Parent</summary>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
-          </ul>
+        <div className="navbar-center ">
+          <div className="hidden lg:flex">
+            <NavigationMenuDemo />
+          </div>
         </div>
         <div className="navbar-end">
           <a className="btn">Button</a>

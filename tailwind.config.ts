@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  daisyui: {
+    themes: ["light"],
+  },
   darkMode: ["class"],
   content: ["./src/app/**/*.{ts,tsx}", "./src/components/**/*.{ts,tsx}"],
   theme: {
@@ -12,6 +15,10 @@ module.exports = {
     },
     extend: {
       colors: {
+        myOrange: "#FD7014",
+        myBlackHead: "#222831",
+        myBlackPara: "#393E46",
+        myWhite: "#EEEEEE",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

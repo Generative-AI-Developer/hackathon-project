@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Services = () => {
@@ -19,28 +20,79 @@ const Services = () => {
             </div>
           </div>
           <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
-            <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
-              <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  className="w-10 h-10"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                </svg>
-              </div>
+            <div className="p-4 md:w-1/3 mx-auto flex flex-col text-center items-center">
+              <Image
+                alt="Delivery Image"
+                width={100}
+                height={100}
+                src={"/pictures/delivery-van.png"}
+              />
               <div className="flex-grow">
-                <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
-                  Shooting Stars
+                <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+                  Money Back Guarantee
                 </h2>
                 <p className="leading-relaxed text-base">
-                  Blue bottle crucifix vinyl post-ironic four dollar toast vegan
-                  taxidermy. Gastropub indxgo juice poutine, ramps microdosing
-                  banh mi pug VHS try-hard.
+                  Get money back on damage projucts{" "}
+                </p>
+                <a className="mt-3 text-indigo-500 inline-flex items-center">
+                  Learn More
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    className="w-4 h-4 ml-2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div className="p-4 md:w-1/3 mx-auto flex flex-col text-center items-center">
+              <Image
+                alt="moneyback"
+                width={100}
+                height={100}
+                src={"/pictures/moneyback.png"}
+              />
+              <div className="flex-grow">
+                <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+                  Free Delivery
+                </h2>
+                <p className="leading-relaxed text-base">
+                  Free Delivery on more than $100
+                </p>
+                <a className="mt-3 text-indigo-500 inline-flex items-center">
+                  Learn More
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    className="w-4 h-4 ml-2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div className="p-4 md:w-1/3 mx-auto flex flex-col text-center items-center">
+              <Image
+                alt="24/7-img"
+                width={100}
+                height={100}
+                src={"/pictures/24-7.png"}
+              />
+              <div className="flex-grow">
+                <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+                  24/7 Customer Service
+                </h2>
+                <p className="leading-relaxed text-base">
+                  For Queries and Question feel free to contact
                 </p>
                 <a className="mt-3 text-indigo-500 inline-flex items-center">
                   Learn More
